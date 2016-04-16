@@ -1,11 +1,12 @@
 package com.circuitstatic.discotek;
 
-import android.animation.ArgbEvaluator;
-import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
+
+import com.nineoldandroids.animation.ArgbEvaluator;
+import com.nineoldandroids.animation.ObjectAnimator;
 
 public class DynamicColorScreen extends Activity {
 

@@ -4,9 +4,28 @@ android {
     compileSdkVersion 23
     buildToolsVersion "24.0.0 rc3"
 
+    repositories {
+        //NOTE: These are searched for requested dependencies in order... best to have smaller / faster repos up top and the larger / slower repos as fallbacks
+
+        // Workaround for issue where android SDK repo is not automatically detected by Gradle:
+        // https://code.google.com/p/android/issues/detail?id=69270
+        def androidHome = System.getenv("ANDROID_HOME")
+        maven { url "$androidHome/extras/android/m2repository/" }
+
+        mavenCentral()
+        jcenter()
+
+        //Backup http source for dependencies just in case certificates get updated and builds start failing again
+        jcenter {//noinspection GroovyAssignabilityCheck
+            url "http://jcenter.bintray.com/"
+        }
+
+        maven { url "https://jitpack.io" }
+    }
+
     defaultConfig {
         applicationId "com.circuitstatic.discotek"
-        minSdkVersion 15
+        minSdkVersion 1
         targetSdkVersion 23
     }
 
@@ -16,4 +35,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
+}
+
+dependencies {
+
+    //"NineOldAndroids" adds ObjectAnimator support for Android API 1 - 10!
+    //https://github.com/JakeWharton/NineOldAndroids/
+    compile(group: 'com.nineoldandroids', name: 'library', version: '2.4.0', ext: 'jar')
 }

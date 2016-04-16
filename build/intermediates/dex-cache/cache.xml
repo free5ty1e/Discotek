@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\droidDev\DiskotekA\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="24.0.0 rc3"
+        sha1="60e095d317c6305b4fcbbf6739233a5980982d1a">
+        <dex dex="C:\droidDev\DiskotekA\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_dbc83a4f2d6d9bf6d2934609fc24e2c300228b1c\classes.dex" />
+    </item>
+    <item
+        jar="C:\droidDev\DiskotekA\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="24.0.0 rc3"
+        sha1="097f634d556f5d84949fc63b00bc9dc9516e49d5">
+        <dex dex="C:\droidDev\DiskotekA\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_89be03ffb9e8d7d936b48d306ee132ce86540bda\classes.dex" />
+    </item>
+
+</items>
